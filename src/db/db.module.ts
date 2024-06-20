@@ -26,8 +26,10 @@ class ConfigDB {
       password: this.getValue('POSTGRES_PASSWORD'),
       database: this.getValue('POSTGRES_DATABASE'),
       entities: [__dirname + '/***/*.entity{.js, .ts}'],
+      migrationsTableName: 'migration',
+      migrations: ['src/migration/*.ts'],
       autoLoadEntities: true,
-      synchronize: true,
+     // synchronize: true,
     };
   }
 }
